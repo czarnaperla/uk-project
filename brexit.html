@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Brexit</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header class="brexit_header">
+
+<nav>
+<div class="menu-icon">
+<i class="fa fa-bars fa-2x"></i>
+</div>
+<div class="flag"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" height="15%" width="15%" ></div>
+<p class="title">The UK Project</p>
+<div class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="history.html">History</a></li>
+<li><a href="geography.html">Geography</a></li>
+<li><a href="culture.html">Culture</a></li>
+<li><a href="science.html">Science</a></li>
+<li><a href="politics.html">Politics</a></li>
+</ul>
+</div>
+<h1 class="brexit_title">TIME UNTIL BREXIT</h1>
+<hr id="brexit">
+<p id="time" style="font-size: 60px; text-align: center;"></p>
+
+<!-- Brexit countdown timer JavaScript -->
+    <script type="text/javascript">
+    var brexitDate = new Date("Mar 29, 2019 00:00:00").getTime();
+    
+    var brexitRefresh = setInterval(function() {
+    
+    var now = new Date().getTime();
+    
+    var timeDistance = brexitDate - now;
+    
+    // Time calculations from https://www.w3schools.com/howto/howto_js_countdown.asp
+    var days = Math.floor(timeDistance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeDistance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeDistance % (1000 * 60)) / 1000);
+    
+    document.getElementById("time").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+     if (distance < 0) {
+    clearInterval(brexitRefresh);
+    document.getElementById("time").innerHTML = "BREXIT HAS ALREADY HAPPENED";
+  }
+}, 1000);
+        
+    </script>
+</nav>
+</header>
+</div>
+<!-- Website JavaScript -->
+<script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+
+</script>
+
+</body>
+</html>
