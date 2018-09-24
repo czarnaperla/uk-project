@@ -53,7 +53,7 @@ header {
       color: #fff;
       font-weight: bold;
       font-size: 20px;
-      letter-spacing: 2px;
+      letter-spacing: inherit;
 }
  
 nav {
@@ -138,4 +138,23 @@ nav ul li a {
             display: block;
       }
  
+}
+
+.title {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 15px 200px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: inherit;
+    font-family: 'Poppins', sans-serif;
+}
+
+.twitter-timeline {
+    margin: 15px;
+    float: right;
+    height: 20px;
+    width: 20px;
 }
